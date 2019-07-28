@@ -1,0 +1,72 @@
+html{
+  background-color: black;
+
+}
+body{
+  font-size: 1em;
+  background-image: url(images/scroll.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+/* TO-DO: Entire list is shefting from right to left*/
+header{
+  padding: 0 25% 0 25%;
+  align-items: center;
+}
+header h1{
+  font-size: 4em;
+  width: 63%;
+  margin: 0 auto;
+}
+header h3{
+  margin: 0 auto;
+  width: 23%;
+}
+/* TODO: Fix background scroll image, it is not appearing and the screen turns grey. */
+.scrollSubmissions{
+
+}
+.scrollSubmissions ul li{
+  background-color: tan;
+  overflow: auto;
+  width:100%;
+  border:2px solid brown;
+  padding: 10px;
+}
+.scrollSubmissions ul{
+  overflow: auto;
+  width:50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.scrollSubmissions button{
+  width: 30%;
+  background-color: cadetblue;
+  font-size: 1em;
+  padding: 8px;
+  margin: 0 0 0 35%;
+}
+
+form{
+  overflow: auto;
+  width: 50%;
+  margin: 0 auto;
+  padding: 35px 0 20px 20px;
+}
+input{
+  height: 20px;
+  font-size: 1.1em;
+  border: 7px solid cadetblue;
+}
+form button{
+  width: 30%;
+  background-color: cadetblue;
+  font-size: 1em;
+  padding: 8px;
+}
+
+.fa-vote-yea{
+  color:red
+}

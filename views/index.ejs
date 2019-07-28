@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+  </head>
+  <body>
+
+    <header>
+      <h1>Forever Scroll</h1>
+      <h3> Join the story.</h3>
+    </header>
+<!-- TODO: identify the first ten entries in your list and ark them for deleteion.
+           when the user preses the button the topt ten entries are deleted-->
+    <form action="/quotes" method="POST">
+      <input type="text" placeholder="name" name="name">
+      <input type="text" placeholder="what happens next?" name="quote">
+      <button type="submit">Submit</button>
+    </form>
+
+    <section class="scrollSubmissions">
+      <ul class="quotes">
+        <% for(var i=0; i<quotes.length; i++) {%>
+          <li class="quote">
+            <span><%= quotes[i].name %></span>
+            <span><%= quotes[i].quote %></span>
+            <span><i class="fas fa-trash" aria-hidden="true"></i></span>
+            <%
+              let color = ""
+
+              if(quotes[i].upvote){
+                color = "red"
+
+              }
+
+             %>
+            <i data-name="<%= quotes[i].name %>" data-quotes="<%= quotes[i].quotes %>" class="fas fa-vote-yea <%=color%>" aria-hidden="true"></i>
+          </li>
+        <% } %>
+      </ul>
+      <button id="delete"> Delete the top ten posts </button>
+    </section>
+
+
+
+    <script src="main.js"></script>
+  </body>
+</html>
